@@ -1,0 +1,27 @@
+[2022-08-11 22:30:38,835] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T21:30:00+00:00 [queued]>
+[2022-08-11 22:30:38,880] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T21:30:00+00:00 [queued]>
+[2022-08-11 22:30:38,882] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 22:30:38,894] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-11 22:30:38,897] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 22:30:38,978] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extract_sheets> on 2022-08-11 21:30:00+00:00
+[2022-08-11 22:30:39,002] {standard_task_runner.py:52} INFO - Started process 3453 to run task
+[2022-08-11 22:30:39,019] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'extract_sheets', 'scheduled__2022-08-11T21:30:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpnvdtx3ea', '--error-file', '/tmp/tmpq2pw6h2r']
+[2022-08-11 22:30:39,030] {standard_task_runner.py:80} INFO - Job 53: Subtask extract_sheets
+[2022-08-11 22:30:39,425] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T21:30:00+00:00 [running]> on host 53e7d4a502e6
+[2022-08-11 22:30:39,950] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=extract_sheets
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-11T21:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-11T21:30:00+00:00
+[2022-08-11 22:30:39,960] {ETL_Raizen.py:71} INFO - Extracting sheet DPCache_m3
+[2022-08-11 22:34:16,073] {ETL_Raizen.py:74} INFO - Sheet DPCache_m3 succesfully extracted
+[2022-08-11 22:34:16,082] {ETL_Raizen.py:71} INFO - Extracting sheet DPCache_m3_2
+[2022-08-11 22:37:25,951] {ETL_Raizen.py:74} INFO - Sheet DPCache_m3_2 succesfully extracted
+[2022-08-11 22:37:25,953] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-11 22:37:26,148] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=extract_sheets, execution_date=20220811T213000, start_date=20220811T223038, end_date=20220811T223726
+[2022-08-11 22:37:26,417] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-11 22:37:26,658] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

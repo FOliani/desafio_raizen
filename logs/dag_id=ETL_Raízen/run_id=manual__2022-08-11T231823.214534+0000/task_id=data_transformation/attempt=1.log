@@ -1,0 +1,55 @@
+[2022-08-11 23:25:14,328] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation manual__2022-08-11T23:18:23.214534+00:00 [queued]>
+[2022-08-11 23:25:14,383] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation manual__2022-08-11T23:18:23.214534+00:00 [queued]>
+[2022-08-11 23:25:14,384] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 23:25:14,386] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-11 23:25:14,389] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 23:25:14,503] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_transformation> on 2022-08-11 23:18:23.214534+00:00
+[2022-08-11 23:25:14,541] {standard_task_runner.py:52} INFO - Started process 6015 to run task
+[2022-08-11 23:25:14,554] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'data_transformation', 'manual__2022-08-11T23:18:23.214534+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpdwawqrm9', '--error-file', '/tmp/tmpq3_y65mo']
+[2022-08-11 23:25:14,557] {standard_task_runner.py:80} INFO - Job 84: Subtask data_transformation
+[2022-08-11 23:25:14,765] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.data_transformation manual__2022-08-11T23:18:23.214534+00:00 [running]> on host 53e7d4a502e6
+[2022-08-11 23:25:15,158] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=data_transformation
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-11T23:18:23.214534+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-11T23:18:23.214534+00:00
+[2022-08-11 23:25:15,165] {ETL_Raizen.py:81} INFO - Processing data of sheet DPCache_m3
+[2022-08-11 23:25:26,044] {logging_mixin.py:115} INFO - product               object
+uf                    object
+unit                  object
+volume               float64
+year_month    datetime64[ns]
+created_at    datetime64[ns]
+dtype: object
+[2022-08-11 23:25:26,045] {ETL_Raizen.py:126} INFO - Data of sheet DPCache_m3 successfully processed
+[2022-08-11 23:25:26,046] {ETL_Raizen.py:127} INFO - Visual check: 
+[2022-08-11 23:25:26,091] {logging_mixin.py:115} INFO -       product        uf unit      volume year_month          created_at
+0  GASOLINA C  RONDÔNIA   m3  136073.253 2000-01-01 2022-08-11 23:25:24
+1  GASOLINA C      ACRE   m3    3358.346 2000-01-01 2022-08-11 23:25:24
+2  GASOLINA C  AMAZONAS   m3   20766.918 2000-01-01 2022-08-11 23:25:24
+3  GASOLINA C   RORAIMA   m3    3716.032 2000-01-01 2022-08-11 23:25:24
+4  GASOLINA C      PARÁ   m3   29755.907 2000-01-01 2022-08-11 23:25:24
+[2022-08-11 23:25:26,092] {ETL_Raizen.py:81} INFO - Processing data of sheet DPCache_m3_2
+[2022-08-11 23:25:27,826] {logging_mixin.py:115} INFO - product               object
+uf                    object
+unit                  object
+volume               float64
+year_month    datetime64[ns]
+created_at    datetime64[ns]
+dtype: object
+[2022-08-11 23:25:27,827] {ETL_Raizen.py:126} INFO - Data of sheet DPCache_m3_2 successfully processed
+[2022-08-11 23:25:27,828] {ETL_Raizen.py:127} INFO - Visual check: 
+[2022-08-11 23:25:27,864] {logging_mixin.py:115} INFO -             product        uf unit    volume year_month          created_at
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3  81453.67 2013-01-01 2022-08-11 23:25:27
+1  ÓLEO DIESEL S-10      ACRE   m3   1483.00 2013-01-01 2022-08-11 23:25:27
+2  ÓLEO DIESEL S-10  AMAZONAS   m3   6836.30 2013-01-01 2022-08-11 23:25:27
+3  ÓLEO DIESEL S-10   RORAIMA   m3   1475.30 2013-01-01 2022-08-11 23:25:27
+4  ÓLEO DIESEL S-10      PARÁ   m3  40913.48 2013-01-01 2022-08-11 23:25:27
+[2022-08-11 23:25:27,865] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-11 23:25:27,897] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=data_transformation, execution_date=20220811T231823, start_date=20220811T232514, end_date=20220811T232527
+[2022-08-11 23:25:27,979] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-11 23:25:28,061] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2022-08-11 21:59:31,629] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.creating_raw_data_dir manual__2022-08-11T21:59:27.109029+00:00 [queued]>
+[2022-08-11 21:59:31,670] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.creating_raw_data_dir manual__2022-08-11T21:59:27.109029+00:00 [queued]>
+[2022-08-11 21:59:31,687] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 21:59:31,689] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-11 21:59:31,690] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-11 21:59:31,871] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): creating_raw_data_dir> on 2022-08-11 21:59:27.109029+00:00
+[2022-08-11 21:59:31,904] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'creating_raw_data_dir', 'manual__2022-08-11T21:59:27.109029+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpn1skk74f', '--error-file', '/tmp/tmp_50il7cr']
+[2022-08-11 21:59:31,911] {standard_task_runner.py:80} INFO - Job 25: Subtask creating_raw_data_dir
+[2022-08-11 21:59:31,910] {standard_task_runner.py:52} INFO - Started process 1748 to run task
+[2022-08-11 21:59:32,249] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.creating_raw_data_dir manual__2022-08-11T21:59:27.109029+00:00 [running]> on host 53e7d4a502e6
+[2022-08-11 21:59:32,628] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=creating_raw_data_dir
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-11T21:59:27.109029+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-11T21:59:27.109029+00:00
+[2022-08-11 21:59:32,636] {ETL_Raizen.py:28} INFO - Dir already exists
+[2022-08-11 21:59:32,639] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-11 21:59:32,719] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=creating_raw_data_dir, execution_date=20220811T215927, start_date=20220811T215931, end_date=20220811T215932
+[2022-08-11 21:59:32,932] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-11 21:59:33,069] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

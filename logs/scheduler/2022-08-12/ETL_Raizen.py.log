@@ -1,0 +1,95 @@
+[2022-08-12 00:00:11,103] {processor.py:153} INFO - Started process (PID=17549) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:11,104] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:00:11,106] {logging_mixin.py:115} INFO - [2022-08-12 00:00:11,106] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:12,043] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:12,137] {logging_mixin.py:115} INFO - [2022-08-12 00:00:12,132] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:00:12,224] {logging_mixin.py:115} INFO - [2022-08-12 00:00:12,224] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:00:12,263] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.167 seconds
+[2022-08-12 00:00:43,056] {processor.py:153} INFO - Started process (PID=17603) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:43,059] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:00:43,061] {logging_mixin.py:115} INFO - [2022-08-12 00:00:43,061] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:45,592] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:00:45,712] {logging_mixin.py:115} INFO - [2022-08-12 00:00:45,710] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:00:45,860] {logging_mixin.py:115} INFO - [2022-08-12 00:00:45,859] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:00:45,946] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 2.908 seconds
+[2022-08-12 00:01:07,777] {processor.py:153} INFO - Started process (PID=17655) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:07,779] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:01:07,782] {logging_mixin.py:115} INFO - [2022-08-12 00:01:07,781] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:09,616] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:09,700] {logging_mixin.py:115} INFO - [2022-08-12 00:01:09,697] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:01:09,776] {logging_mixin.py:115} INFO - [2022-08-12 00:01:09,776] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:01:09,828] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 2.061 seconds
+[2022-08-12 00:01:40,614] {processor.py:153} INFO - Started process (PID=17710) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:40,616] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:01:40,618] {logging_mixin.py:115} INFO - [2022-08-12 00:01:40,618] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:41,717] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:01:41,786] {logging_mixin.py:115} INFO - [2022-08-12 00:01:41,784] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:01:41,878] {logging_mixin.py:115} INFO - [2022-08-12 00:01:41,878] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:01:41,921] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.315 seconds
+[2022-08-12 00:02:12,620] {processor.py:153} INFO - Started process (PID=17765) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:12,622] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:02:12,624] {logging_mixin.py:115} INFO - [2022-08-12 00:02:12,624] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:13,532] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:13,674] {logging_mixin.py:115} INFO - [2022-08-12 00:02:13,669] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:02:13,767] {logging_mixin.py:115} INFO - [2022-08-12 00:02:13,766] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:02:13,816] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.202 seconds
+[2022-08-12 00:02:44,154] {processor.py:153} INFO - Started process (PID=17819) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:44,156] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:02:44,158] {logging_mixin.py:115} INFO - [2022-08-12 00:02:44,157] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:44,931] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:02:45,013] {logging_mixin.py:115} INFO - [2022-08-12 00:02:45,011] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:02:45,060] {logging_mixin.py:115} INFO - [2022-08-12 00:02:45,060] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:02:45,081] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 0.937 seconds
+[2022-08-12 00:03:15,168] {processor.py:153} INFO - Started process (PID=17881) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:15,170] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:03:15,172] {logging_mixin.py:115} INFO - [2022-08-12 00:03:15,172] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:16,435] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:16,513] {logging_mixin.py:115} INFO - [2022-08-12 00:03:16,510] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:03:16,603] {logging_mixin.py:115} INFO - [2022-08-12 00:03:16,603] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:03:16,644] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.484 seconds
+[2022-08-12 00:03:47,002] {processor.py:153} INFO - Started process (PID=17938) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:47,004] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:03:47,006] {logging_mixin.py:115} INFO - [2022-08-12 00:03:47,006] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:48,271] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:03:48,348] {logging_mixin.py:115} INFO - [2022-08-12 00:03:48,346] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:03:48,425] {logging_mixin.py:115} INFO - [2022-08-12 00:03:48,425] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:03:48,459] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.465 seconds
+[2022-08-12 00:04:19,129] {processor.py:153} INFO - Started process (PID=17992) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:19,131] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:04:19,132] {logging_mixin.py:115} INFO - [2022-08-12 00:04:19,132] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:20,233] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:20,303] {logging_mixin.py:115} INFO - [2022-08-12 00:04:20,300] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:04:20,361] {logging_mixin.py:115} INFO - [2022-08-12 00:04:20,361] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:04:20,395] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.273 seconds
+[2022-08-12 00:04:50,520] {processor.py:153} INFO - Started process (PID=18047) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:50,521] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:04:50,523] {logging_mixin.py:115} INFO - [2022-08-12 00:04:50,523] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:51,372] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:04:51,496] {logging_mixin.py:115} INFO - [2022-08-12 00:04:51,494] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:04:51,585] {logging_mixin.py:115} INFO - [2022-08-12 00:04:51,585] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:04:51,644] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.129 seconds
+[2022-08-12 00:05:21,948] {processor.py:153} INFO - Started process (PID=18112) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:21,950] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:05:21,952] {logging_mixin.py:115} INFO - [2022-08-12 00:05:21,952] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:23,417] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:23,497] {logging_mixin.py:115} INFO - [2022-08-12 00:05:23,495] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:05:23,568] {logging_mixin.py:115} INFO - [2022-08-12 00:05:23,568] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:05:23,614] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.676 seconds
+[2022-08-12 00:05:53,754] {processor.py:153} INFO - Started process (PID=18167) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:53,756] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:05:53,758] {logging_mixin.py:115} INFO - [2022-08-12 00:05:53,758] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:55,251] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:05:55,328] {logging_mixin.py:115} INFO - [2022-08-12 00:05:55,326] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:05:55,407] {logging_mixin.py:115} INFO - [2022-08-12 00:05:55,407] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:05:55,441] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.701 seconds
+[2022-08-12 00:06:25,656] {processor.py:153} INFO - Started process (PID=18223) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:06:25,669] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:06:25,672] {logging_mixin.py:115} INFO - [2022-08-12 00:06:25,672] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:06:27,328] {processor.py:651} INFO - DAG(s) dict_keys(['ETL_Raízen']) retrieved from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:06:27,419] {logging_mixin.py:115} INFO - [2022-08-12 00:06:27,416] {dag.py:2371} INFO - Sync 1 DAGs
+[2022-08-12 00:06:27,540] {logging_mixin.py:115} INFO - [2022-08-12 00:06:27,539] {dag.py:2919} INFO - Setting next_dagrun for ETL_Raízen to 2022-08-11T23:30:00+00:00, run_after=2022-08-12T00:30:00+00:00
+[2022-08-12 00:06:27,617] {processor.py:161} INFO - Processing /opt/airflow/dags/ETL_Raizen.py took 1.975 seconds
+[2022-08-12 00:06:58,289] {processor.py:153} INFO - Started process (PID=18280) to work on /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:06:58,294] {processor.py:641} INFO - Processing file /opt/airflow/dags/ETL_Raizen.py for tasks to queue
+[2022-08-12 00:06:58,302] {logging_mixin.py:115} INFO - [2022-08-12 00:06:58,302] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/ETL_Raizen.py
+[2022-08-12 00:07:08,174] {logging_mixin.py:115} INFO - [2022-08-12 00:07:08,174] {process_utils.py:240} INFO - Waiting up to 5 seconds for processes to exit...
