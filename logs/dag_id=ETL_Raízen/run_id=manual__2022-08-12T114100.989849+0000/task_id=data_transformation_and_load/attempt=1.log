@@ -1,0 +1,97 @@
+[2022-08-12 11:41:20,434] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:41:00.989849+00:00 [queued]>
+[2022-08-12 11:41:20,449] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:41:00.989849+00:00 [queued]>
+[2022-08-12 11:41:20,450] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:41:20,451] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 11:41:20,451] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:41:20,470] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_transformation_and_load> on 2022-08-12 11:41:00.989849+00:00
+[2022-08-12 11:41:20,478] {standard_task_runner.py:52} INFO - Started process 780 to run task
+[2022-08-12 11:41:20,482] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'data_transformation_and_load', 'manual__2022-08-12T11:41:00.989849+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpaer2kuh0', '--error-file', '/tmp/tmpnejv35_5']
+[2022-08-12 11:41:20,484] {standard_task_runner.py:80} INFO - Job 174: Subtask data_transformation_and_load
+[2022-08-12 11:41:20,565] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:41:00.989849+00:00 [running]> on host 3c4d8e0d9450
+[2022-08-12 11:41:20,668] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=data_transformation_and_load
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T11:41:00.989849+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-12T11:41:00.989849+00:00
+[2022-08-12 11:41:20,670] {ETL_Raizen.py:78} INFO - Processing data of sheet DPCache_m3
+[2022-08-12 11:41:23,459] {logging_mixin.py:115} INFO - Unnamed: 0     4536
+COMBUSTÍVEL    4536
+ANO            4536
+REGIÃO         4536
+ESTADO         4536
+Jan            4486
+Fev            4486
+Mar            4486
+Abr            4487
+Mai            4486
+Jun            4486
+Jul            4486
+Ago            4486
+Set            4486
+Out            4486
+Nov            4486
+Dez            4487
+TOTAL          4486
+dtype: int64
+[2022-08-12 11:41:24,086] {ETL_Raizen.py:122} INFO - Data of sheet DPCache_m3 successfully processed
+[2022-08-12 11:41:24,087] {ETL_Raizen.py:123} INFO - Visual check: 
+[2022-08-12 11:41:24,098] {logging_mixin.py:115} INFO -       product        uf unit  volume       year_month          created_at
+0  GASOLINA C  RONDÔNIA   m3     0.0  2000-Unnamed: 0 2022-08-12 11:41:23
+1  GASOLINA C      ACRE   m3     1.0  2000-Unnamed: 0 2022-08-12 11:41:23
+2  GASOLINA C  AMAZONAS   m3     2.0  2000-Unnamed: 0 2022-08-12 11:41:23
+3  GASOLINA C   RORAIMA   m3     3.0  2000-Unnamed: 0 2022-08-12 11:41:23
+4  GASOLINA C      PARÁ   m3     4.0  2000-Unnamed: 0 2022-08-12 11:41:23
+[2022-08-12 11:41:24,109] {logging_mixin.py:115} INFO - product       58968
+uf            58968
+unit          58968
+volume        58968
+year_month    58968
+created_at    58968
+dtype: int64
+[2022-08-12 11:41:24,109] {ETL_Raizen.py:127} INFO - Saving processed data into parquet format
+[2022-08-12 11:41:40,051] {ETL_Raizen.py:130} INFO - Data successfully saved
+[2022-08-12 11:41:40,052] {ETL_Raizen.py:78} INFO - Processing data of sheet DPCache_m3_2
+[2022-08-12 11:41:40,512] {logging_mixin.py:115} INFO - Unnamed: 0     1080
+COMBUSTÍVEL    1080
+ANO            1080
+REGIÃO         1080
+ESTADO         1080
+Jan            1050
+Fev            1050
+Mar            1050
+Abr            1050
+Mai            1050
+Jun            1050
+Jul            1049
+Ago            1048
+Set            1047
+Out            1047
+Nov            1047
+Dez            1048
+TOTAL          1049
+dtype: int64
+[2022-08-12 11:41:40,621] {ETL_Raizen.py:122} INFO - Data of sheet DPCache_m3_2 successfully processed
+[2022-08-12 11:41:40,622] {ETL_Raizen.py:123} INFO - Visual check: 
+[2022-08-12 11:41:40,632] {logging_mixin.py:115} INFO -             product        uf unit  volume       year_month          created_at
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3     0.0  2013-Unnamed: 0 2022-08-12 11:41:40
+1  ÓLEO DIESEL S-10      ACRE   m3     1.0  2013-Unnamed: 0 2022-08-12 11:41:40
+2  ÓLEO DIESEL S-10  AMAZONAS   m3     2.0  2013-Unnamed: 0 2022-08-12 11:41:40
+3  ÓLEO DIESEL S-10   RORAIMA   m3     3.0  2013-Unnamed: 0 2022-08-12 11:41:40
+4  ÓLEO DIESEL S-10      PARÁ   m3     4.0  2013-Unnamed: 0 2022-08-12 11:41:40
+[2022-08-12 11:41:40,637] {logging_mixin.py:115} INFO - product       14040
+uf            14040
+unit          14040
+volume        14040
+year_month    14040
+created_at    14040
+dtype: int64
+[2022-08-12 11:41:40,638] {ETL_Raizen.py:127} INFO - Saving processed data into parquet format
+[2022-08-12 11:41:44,793] {ETL_Raizen.py:130} INFO - Data successfully saved
+[2022-08-12 11:41:44,794] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-12 11:41:44,809] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=data_transformation_and_load, execution_date=20220812T114100, start_date=20220812T114120, end_date=20220812T114144
+[2022-08-12 11:41:44,844] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-12 11:41:44,881] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

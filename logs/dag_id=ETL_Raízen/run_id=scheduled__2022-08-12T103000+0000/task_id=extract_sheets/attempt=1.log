@@ -1,0 +1,41 @@
+[2022-08-12 11:30:10,085] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-12T10:30:00+00:00 [queued]>
+[2022-08-12 11:30:10,098] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-12T10:30:00+00:00 [queued]>
+[2022-08-12 11:30:10,099] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:30:10,100] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 11:30:10,101] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:30:10,117] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extract_sheets> on 2022-08-12 10:30:00+00:00
+[2022-08-12 11:30:10,122] {standard_task_runner.py:52} INFO - Started process 648 to run task
+[2022-08-12 11:30:10,126] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'extract_sheets', 'scheduled__2022-08-12T10:30:00+00:00', '--job-id', '157', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpjd_az08_', '--error-file', '/tmp/tmpcogowdjb']
+[2022-08-12 11:30:10,127] {standard_task_runner.py:80} INFO - Job 157: Subtask extract_sheets
+[2022-08-12 11:30:10,192] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-12T10:30:00+00:00 [running]> on host 339bb6bdb89c
+[2022-08-12 11:30:10,263] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=extract_sheets
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T10:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-12T10:30:00+00:00
+[2022-08-12 11:30:10,265] {ETL_Raizen.py:68} INFO - Extracting sheet DPCache_m3
+[2022-08-12 11:30:10,275] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL_Raizen.py", line 69, in extract_sheets
+    xlsx = read_xlsx_file()
+  File "/opt/airflow/dags/ETL_Raizen.py", line 53, in read_xlsx_file
+    xlsx = pd.ExcelFile("./raw_data/vendas-combustiveis-m3.xlsx")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-08-12 11:30:10,296] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL_Raízen, task_id=extract_sheets, execution_date=20220812T103000, start_date=20220812T113010, end_date=20220812T113010
+[2022-08-12 11:30:10,310] {standard_task_runner.py:97} ERROR - Failed to execute job 157 for task extract_sheets (Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.; 648)
+[2022-08-12 11:30:10,340] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-12 11:30:10,389] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

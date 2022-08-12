@@ -1,0 +1,195 @@
+[2022-08-12 11:54:40,308] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:54:22.434506+00:00 [queued]>
+[2022-08-12 11:54:40,318] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:54:22.434506+00:00 [queued]>
+[2022-08-12 11:54:40,320] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:54:40,321] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 11:54:40,321] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 11:54:40,339] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_transformation_and_load> on 2022-08-12 11:54:22.434506+00:00
+[2022-08-12 11:54:40,347] {standard_task_runner.py:52} INFO - Started process 1588 to run task
+[2022-08-12 11:54:40,350] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'data_transformation_and_load', 'manual__2022-08-12T11:54:22.434506+00:00', '--job-id', '184', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpnb1ra9n0', '--error-file', '/tmp/tmpe39hsp98']
+[2022-08-12 11:54:40,352] {standard_task_runner.py:80} INFO - Job 184: Subtask data_transformation_and_load
+[2022-08-12 11:54:40,433] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.data_transformation_and_load manual__2022-08-12T11:54:22.434506+00:00 [running]> on host 3c4d8e0d9450
+[2022-08-12 11:54:40,537] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=data_transformation_and_load
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T11:54:22.434506+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-12T11:54:22.434506+00:00
+[2022-08-12 11:54:40,539] {ETL_Raizen.py:78} INFO - Processing data of sheet DPCache_m3
+[2022-08-12 11:54:42,926] {logging_mixin.py:115} INFO -    Unnamed: 0      COMBUSTÍVEL   ANO  ...        Dez      TOTAL     product
+0           0  GASOLINA C (m3)  2000  ...  11547.576  10818.094  GASOLINA C
+1           1  GASOLINA C (m3)  2000  ...   3225.610   3289.718  GASOLINA C
+2           2  GASOLINA C (m3)  2000  ...  21145.643  20633.175  GASOLINA C
+3           3  GASOLINA C (m3)  2000  ...   4029.900   4358.516  GASOLINA C
+4           4  GASOLINA C (m3)  2000  ...  31807.840  31009.972  GASOLINA C
+
+[5 rows x 19 columns]
+[2022-08-12 11:54:42,981] {logging_mixin.py:115} INFO -    Unnamed: 0      COMBUSTÍVEL   ANO  ...      TOTAL     product  unit
+0           0  GASOLINA C (m3)  2000  ...  10818.094  GASOLINA C    m3
+1           1  GASOLINA C (m3)  2000  ...   3289.718  GASOLINA C    m3
+2           2  GASOLINA C (m3)  2000  ...  20633.175  GASOLINA C    m3
+3           3  GASOLINA C (m3)  2000  ...   4358.516  GASOLINA C    m3
+4           4  GASOLINA C (m3)  2000  ...  31009.972  GASOLINA C    m3
+
+[5 rows x 20 columns]
+[2022-08-12 11:54:43,005] {logging_mixin.py:115} INFO -    Unnamed: 0      COMBUSTÍVEL   ANO  ...      TOTAL     product  unit
+0           0  GASOLINA C (m3)  2000  ...  10818.094  GASOLINA C    m3
+1           1  GASOLINA C (m3)  2000  ...   3289.718  GASOLINA C    m3
+2           2  GASOLINA C (m3)  2000  ...  20633.175  GASOLINA C    m3
+3           3  GASOLINA C (m3)  2000  ...   4358.516  GASOLINA C    m3
+4           4  GASOLINA C (m3)  2000  ...  31009.972  GASOLINA C    m3
+
+[5 rows x 20 columns]
+[2022-08-12 11:54:43,025] {logging_mixin.py:115} INFO -    Unnamed: 0   ANO        uf  ...        Dez     product  unit
+0           0  2000  RONDÔNIA  ...  11547.576  GASOLINA C    m3
+1           1  2000      ACRE  ...   3225.610  GASOLINA C    m3
+2           2  2000  AMAZONAS  ...  21145.643  GASOLINA C    m3
+3           3  2000   RORAIMA  ...   4029.900  GASOLINA C    m3
+4           4  2000      PARÁ  ...  31807.840  GASOLINA C    m3
+
+[5 rows x 17 columns]
+[2022-08-12 11:54:43,043] {logging_mixin.py:115} INFO -       product        uf   ANO unit       month  volume
+0  GASOLINA C  RONDÔNIA  2000   m3  Unnamed: 0     0.0
+1  GASOLINA C      ACRE  2000   m3  Unnamed: 0     1.0
+2  GASOLINA C  AMAZONAS  2000   m3  Unnamed: 0     2.0
+3  GASOLINA C   RORAIMA  2000   m3  Unnamed: 0     3.0
+4  GASOLINA C      PARÁ  2000   m3  Unnamed: 0     4.0
+[2022-08-12 11:54:43,078] {logging_mixin.py:115} INFO -       product        uf   ANO unit       month  volume
+0  GASOLINA C  RONDÔNIA  2000   m3  Unnamed: 0     0.0
+1  GASOLINA C      ACRE  2000   m3  Unnamed: 0     1.0
+2  GASOLINA C  AMAZONAS  2000   m3  Unnamed: 0     2.0
+3  GASOLINA C   RORAIMA  2000   m3  Unnamed: 0     3.0
+4  GASOLINA C      PARÁ  2000   m3  Unnamed: 0     4.0
+[2022-08-12 11:54:43,133] {logging_mixin.py:115} INFO -       product        uf   ANO unit       month  volume       year_month
+0  GASOLINA C  RONDÔNIA  2000   m3  Unnamed: 0     0.0  2000-Unnamed: 0
+1  GASOLINA C      ACRE  2000   m3  Unnamed: 0     1.0  2000-Unnamed: 0
+2  GASOLINA C  AMAZONAS  2000   m3  Unnamed: 0     2.0  2000-Unnamed: 0
+3  GASOLINA C   RORAIMA  2000   m3  Unnamed: 0     3.0  2000-Unnamed: 0
+4  GASOLINA C      PARÁ  2000   m3  Unnamed: 0     4.0  2000-Unnamed: 0
+[2022-08-12 11:54:43,156] {logging_mixin.py:115} INFO -       product        uf unit  volume       year_month
+0  GASOLINA C  RONDÔNIA   m3     0.0  2000-Unnamed: 0
+1  GASOLINA C      ACRE   m3     1.0  2000-Unnamed: 0
+2  GASOLINA C  AMAZONAS   m3     2.0  2000-Unnamed: 0
+3  GASOLINA C   RORAIMA   m3     3.0  2000-Unnamed: 0
+4  GASOLINA C      PARÁ   m3     4.0  2000-Unnamed: 0
+[2022-08-12 11:54:43,175] {logging_mixin.py:115} INFO -       product        uf unit  volume       year_month          created_at
+0  GASOLINA C  RONDÔNIA   m3     0.0  2000-Unnamed: 0 2022-08-12 11:54:43
+1  GASOLINA C      ACRE   m3     1.0  2000-Unnamed: 0 2022-08-12 11:54:43
+2  GASOLINA C  AMAZONAS   m3     2.0  2000-Unnamed: 0 2022-08-12 11:54:43
+3  GASOLINA C   RORAIMA   m3     3.0  2000-Unnamed: 0 2022-08-12 11:54:43
+4  GASOLINA C      PARÁ   m3     4.0  2000-Unnamed: 0 2022-08-12 11:54:43
+[2022-08-12 11:54:43,631] {logging_mixin.py:115} INFO -       product        uf unit  volume       year_month          created_at
+0  GASOLINA C  RONDÔNIA   m3     0.0  2000-Unnamed: 0 2022-08-12 11:54:43
+1  GASOLINA C      ACRE   m3     1.0  2000-Unnamed: 0 2022-08-12 11:54:43
+2  GASOLINA C  AMAZONAS   m3     2.0  2000-Unnamed: 0 2022-08-12 11:54:43
+3  GASOLINA C   RORAIMA   m3     3.0  2000-Unnamed: 0 2022-08-12 11:54:43
+4  GASOLINA C      PARÁ   m3     4.0  2000-Unnamed: 0 2022-08-12 11:54:43
+[2022-08-12 11:54:43,655] {ETL_Raizen.py:132} INFO - Data of sheet DPCache_m3 successfully processed
+[2022-08-12 11:54:43,655] {ETL_Raizen.py:133} INFO - Visual check: 
+[2022-08-12 11:54:43,666] {logging_mixin.py:115} INFO -       product        uf unit  volume       year_month          created_at
+0  GASOLINA C  RONDÔNIA   m3     0.0  2000-Unnamed: 0 2022-08-12 11:54:43
+1  GASOLINA C      ACRE   m3     1.0  2000-Unnamed: 0 2022-08-12 11:54:43
+2  GASOLINA C  AMAZONAS   m3     2.0  2000-Unnamed: 0 2022-08-12 11:54:43
+3  GASOLINA C   RORAIMA   m3     3.0  2000-Unnamed: 0 2022-08-12 11:54:43
+4  GASOLINA C      PARÁ   m3     4.0  2000-Unnamed: 0 2022-08-12 11:54:43
+[2022-08-12 11:54:43,678] {logging_mixin.py:115} INFO - product       58968
+uf            58968
+unit          58968
+volume        58968
+year_month    58968
+created_at    58968
+dtype: int64
+[2022-08-12 11:54:43,679] {ETL_Raizen.py:137} INFO - Saving processed data into parquet format
+[2022-08-12 11:54:59,290] {ETL_Raizen.py:140} INFO - Data successfully saved
+[2022-08-12 11:54:59,290] {ETL_Raizen.py:78} INFO - Processing data of sheet DPCache_m3_2
+[2022-08-12 11:54:59,675] {logging_mixin.py:115} INFO -    Unnamed: 0            COMBUSTÍVEL  ...      TOTAL           product
+0           0  ÓLEO DIESEL S-10 (m3)  ...   9088.800  ÓLEO DIESEL S-10
+1           1  ÓLEO DIESEL S-10 (m3)  ...   1483.000  ÓLEO DIESEL S-10
+2           2  ÓLEO DIESEL S-10 (m3)  ...   7154.200  ÓLEO DIESEL S-10
+3           3  ÓLEO DIESEL S-10 (m3)  ...   1311.200  ÓLEO DIESEL S-10
+4           4  ÓLEO DIESEL S-10 (m3)  ...  41248.336  ÓLEO DIESEL S-10
+
+[5 rows x 19 columns]
+[2022-08-12 11:54:59,705] {logging_mixin.py:115} INFO -    Unnamed: 0            COMBUSTÍVEL   ANO  ...      TOTAL           product  unit
+0           0  ÓLEO DIESEL S-10 (m3)  2013  ...   9088.800  ÓLEO DIESEL S-10    m3
+1           1  ÓLEO DIESEL S-10 (m3)  2013  ...   1483.000  ÓLEO DIESEL S-10    m3
+2           2  ÓLEO DIESEL S-10 (m3)  2013  ...   7154.200  ÓLEO DIESEL S-10    m3
+3           3  ÓLEO DIESEL S-10 (m3)  2013  ...   1311.200  ÓLEO DIESEL S-10    m3
+4           4  ÓLEO DIESEL S-10 (m3)  2013  ...  41248.336  ÓLEO DIESEL S-10    m3
+
+[5 rows x 20 columns]
+[2022-08-12 11:54:59,728] {logging_mixin.py:115} INFO -    Unnamed: 0            COMBUSTÍVEL   ANO  ...      TOTAL           product  unit
+0           0  ÓLEO DIESEL S-10 (m3)  2013  ...   9088.800  ÓLEO DIESEL S-10    m3
+1           1  ÓLEO DIESEL S-10 (m3)  2013  ...   1483.000  ÓLEO DIESEL S-10    m3
+2           2  ÓLEO DIESEL S-10 (m3)  2013  ...   7154.200  ÓLEO DIESEL S-10    m3
+3           3  ÓLEO DIESEL S-10 (m3)  2013  ...   1311.200  ÓLEO DIESEL S-10    m3
+4           4  ÓLEO DIESEL S-10 (m3)  2013  ...  41248.336  ÓLEO DIESEL S-10    m3
+
+[5 rows x 20 columns]
+[2022-08-12 11:54:59,749] {logging_mixin.py:115} INFO -    Unnamed: 0   ANO        uf  ...       Dez           product  unit
+0           0  2013  RONDÔNIA  ...   9767.40  ÓLEO DIESEL S-10    m3
+1           1  2013      ACRE  ...   1439.00  ÓLEO DIESEL S-10    m3
+2           2  2013  AMAZONAS  ...   6334.00  ÓLEO DIESEL S-10    m3
+3           3  2013   RORAIMA  ...   1083.80  ÓLEO DIESEL S-10    m3
+4           4  2013      PARÁ  ...  37168.16  ÓLEO DIESEL S-10    m3
+
+[5 rows x 17 columns]
+[2022-08-12 11:54:59,762] {logging_mixin.py:115} INFO -             product        uf   ANO unit       month  volume
+0  ÓLEO DIESEL S-10  RONDÔNIA  2013   m3  Unnamed: 0     0.0
+1  ÓLEO DIESEL S-10      ACRE  2013   m3  Unnamed: 0     1.0
+2  ÓLEO DIESEL S-10  AMAZONAS  2013   m3  Unnamed: 0     2.0
+3  ÓLEO DIESEL S-10   RORAIMA  2013   m3  Unnamed: 0     3.0
+4  ÓLEO DIESEL S-10      PARÁ  2013   m3  Unnamed: 0     4.0
+[2022-08-12 11:54:59,777] {logging_mixin.py:115} INFO -             product        uf   ANO unit       month  volume
+0  ÓLEO DIESEL S-10  RONDÔNIA  2013   m3  Unnamed: 0     0.0
+1  ÓLEO DIESEL S-10      ACRE  2013   m3  Unnamed: 0     1.0
+2  ÓLEO DIESEL S-10  AMAZONAS  2013   m3  Unnamed: 0     2.0
+3  ÓLEO DIESEL S-10   RORAIMA  2013   m3  Unnamed: 0     3.0
+4  ÓLEO DIESEL S-10      PARÁ  2013   m3  Unnamed: 0     4.0
+[2022-08-12 11:54:59,796] {logging_mixin.py:115} INFO -             product        uf   ANO unit       month  volume       year_month
+0  ÓLEO DIESEL S-10  RONDÔNIA  2013   m3  Unnamed: 0     0.0  2013-Unnamed: 0
+1  ÓLEO DIESEL S-10      ACRE  2013   m3  Unnamed: 0     1.0  2013-Unnamed: 0
+2  ÓLEO DIESEL S-10  AMAZONAS  2013   m3  Unnamed: 0     2.0  2013-Unnamed: 0
+3  ÓLEO DIESEL S-10   RORAIMA  2013   m3  Unnamed: 0     3.0  2013-Unnamed: 0
+4  ÓLEO DIESEL S-10      PARÁ  2013   m3  Unnamed: 0     4.0  2013-Unnamed: 0
+[2022-08-12 11:54:59,807] {logging_mixin.py:115} INFO -             product        uf unit  volume       year_month
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3     0.0  2013-Unnamed: 0
+1  ÓLEO DIESEL S-10      ACRE   m3     1.0  2013-Unnamed: 0
+2  ÓLEO DIESEL S-10  AMAZONAS   m3     2.0  2013-Unnamed: 0
+3  ÓLEO DIESEL S-10   RORAIMA   m3     3.0  2013-Unnamed: 0
+4  ÓLEO DIESEL S-10      PARÁ   m3     4.0  2013-Unnamed: 0
+[2022-08-12 11:54:59,815] {logging_mixin.py:115} INFO -             product        uf unit  volume       year_month          created_at
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3     0.0  2013-Unnamed: 0 2022-08-12 11:54:59
+1  ÓLEO DIESEL S-10      ACRE   m3     1.0  2013-Unnamed: 0 2022-08-12 11:54:59
+2  ÓLEO DIESEL S-10  AMAZONAS   m3     2.0  2013-Unnamed: 0 2022-08-12 11:54:59
+3  ÓLEO DIESEL S-10   RORAIMA   m3     3.0  2013-Unnamed: 0 2022-08-12 11:54:59
+4  ÓLEO DIESEL S-10      PARÁ   m3     4.0  2013-Unnamed: 0 2022-08-12 11:54:59
+[2022-08-12 11:54:59,883] {logging_mixin.py:115} INFO -             product        uf unit  volume       year_month          created_at
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3     0.0  2013-Unnamed: 0 2022-08-12 11:54:59
+1  ÓLEO DIESEL S-10      ACRE   m3     1.0  2013-Unnamed: 0 2022-08-12 11:54:59
+2  ÓLEO DIESEL S-10  AMAZONAS   m3     2.0  2013-Unnamed: 0 2022-08-12 11:54:59
+3  ÓLEO DIESEL S-10   RORAIMA   m3     3.0  2013-Unnamed: 0 2022-08-12 11:54:59
+4  ÓLEO DIESEL S-10      PARÁ   m3     4.0  2013-Unnamed: 0 2022-08-12 11:54:59
+[2022-08-12 11:54:59,895] {ETL_Raizen.py:132} INFO - Data of sheet DPCache_m3_2 successfully processed
+[2022-08-12 11:54:59,895] {ETL_Raizen.py:133} INFO - Visual check: 
+[2022-08-12 11:54:59,904] {logging_mixin.py:115} INFO -             product        uf unit  volume       year_month          created_at
+0  ÓLEO DIESEL S-10  RONDÔNIA   m3     0.0  2013-Unnamed: 0 2022-08-12 11:54:59
+1  ÓLEO DIESEL S-10      ACRE   m3     1.0  2013-Unnamed: 0 2022-08-12 11:54:59
+2  ÓLEO DIESEL S-10  AMAZONAS   m3     2.0  2013-Unnamed: 0 2022-08-12 11:54:59
+3  ÓLEO DIESEL S-10   RORAIMA   m3     3.0  2013-Unnamed: 0 2022-08-12 11:54:59
+4  ÓLEO DIESEL S-10      PARÁ   m3     4.0  2013-Unnamed: 0 2022-08-12 11:54:59
+[2022-08-12 11:54:59,909] {logging_mixin.py:115} INFO - product       14040
+uf            14040
+unit          14040
+volume        14040
+year_month    14040
+created_at    14040
+dtype: int64
+[2022-08-12 11:54:59,910] {ETL_Raizen.py:137} INFO - Saving processed data into parquet format
+[2022-08-12 11:55:03,732] {ETL_Raizen.py:140} INFO - Data successfully saved
+[2022-08-12 11:55:03,733] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-12 11:55:03,753] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=data_transformation_and_load, execution_date=20220812T115422, start_date=20220812T115440, end_date=20220812T115503
+[2022-08-12 11:55:03,794] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-12 11:55:03,827] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

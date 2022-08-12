@@ -1,0 +1,22 @@
+[2022-08-12 10:01:27,550] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T23:30:00+00:00 [queued]>
+[2022-08-12 10:01:27,617] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T23:30:00+00:00 [queued]>
+[2022-08-12 10:01:27,620] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 10:01:27,621] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 10:01:27,622] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 10:01:27,722] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): extract_sheets> on 2022-08-11 23:30:00+00:00
+[2022-08-12 10:01:27,752] {standard_task_runner.py:52} INFO - Started process 331 to run task
+[2022-08-12 10:01:27,774] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'extract_sheets', 'scheduled__2022-08-11T23:30:00+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmp7phttq0i', '--error-file', '/tmp/tmpght2t4eu']
+[2022-08-12 10:01:27,818] {standard_task_runner.py:80} INFO - Job 108: Subtask extract_sheets
+[2022-08-12 10:01:28,450] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.extract_sheets scheduled__2022-08-11T23:30:00+00:00 [running]> on host 53e7d4a502e6
+[2022-08-12 10:01:29,012] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=extract_sheets
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-11T23:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-11T23:30:00+00:00
+[2022-08-12 10:01:29,025] {ETL_Raizen.py:71} INFO - Extracting sheet DPCache_m3
+[2022-08-12 10:05:17,225] {ETL_Raizen.py:74} INFO - Sheet DPCache_m3 succesfully extracted
+[2022-08-12 10:05:17,255] {ETL_Raizen.py:71} INFO - Extracting sheet DPCache_m3_2

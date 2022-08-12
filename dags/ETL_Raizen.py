@@ -17,7 +17,6 @@ import logging
 import datetime
 import pandas as pd
 from urllib import request
-from openpyxl import load_workbook
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
@@ -49,37 +48,16 @@ def convert_xls_into_xlsx() -> None:
     os.system("libreoffice --headless --invisible --convert-to xlsx ./raw_data/vendas-combustiveis-m3.xls --outdir ./raw_data")
     logging.info("File .xls succesfully converted into .xlsx")
 
-def read_xlsx_file() -> object:
-    """ method to read .xlsx file and return the object with workbooks """
-    wb = load_workbook("./raw_data/vendas-combustiveis-m3.xlsx")
-    #print(f"wb = {wb}")
-    return wb
 
-def get_specific_sheets(wb, list_all_sheets, specific_sheet) -> None:
-    """ method which receive workbook object defined from .xlsx file and extract an specific sheet """
-    for i in list_all_sheets:
-        if i != specific_sheet:
-            #print(wb[i])
-            wb.remove(wb[i])
-    
-    wb.save(f"./{specific_sheet}.xlsx")
-
-def extract_sheets() -> None:
-    """ method which receive a list of sheets and extract them from workbook """
-    list_specific_sheets = ["DPCache_m3", "DPCache_m3_2"]
-    for i in list_specific_sheets:
-        logging.info(f"Extracting sheet {i}")
-        wb = read_xlsx_file()
-        get_specific_sheets(wb, wb.sheetnames, i)
-        logging.info (f"Sheet {i} succesfully extracted")
-
-def data_transformation_and_load():
-    """ function which apply the desired data transformation to extracted sheets """
+def read_transform_and_save():
+    """ function which read the data, apply the desired data transformation to extracted sheets and save output as parquet"""
     list_specific_sheets = ["DPCache_m3", "DPCache_m3_2"]
 
     for i in list_specific_sheets:
         logging.info(f"Processing data of sheet {i}")
-        df = pd.read_excel(f"./{i}.xlsx")
+        # df = pd.read_excel(f"./{i}.xlsx")
+        xlsx = pd.ExcelFile("./raw_data/vendas-combustiveis-m3.xlsx")
+        df = pd.read_excel(xlsx, i)
 
         #taking only product
         df["product"] = df["COMBUSTÍVEL"].str.split(" \(").str[0]
@@ -91,7 +69,7 @@ def data_transformation_and_load():
         df = df.rename(columns={"ESTADO":"uf"})
 
         #dropping obsolete columns
-        df = df.drop(columns=["COMBUSTÍVEL", "REGIÃO", "TOTAL"])
+        df = df.drop(columns=["COMBUSTÍVEL", "REGIÃO", "TOTAL"], axis=1)
 
         #creating column 'volume' with respective 'month'
         df = pd.melt(df, id_vars=["product", "uf", "ANO", "unit"], var_name=["month"], value_name="volume")
@@ -124,7 +102,6 @@ def data_transformation_and_load():
         logging.info(f"Data of sheet {i} successfully processed")
         logging.info("Visual check: ")
         print(df.head())
-        #print(df.count())
 
         logging.info("Saving processed data into parquet format")
         persist_path = f'{i}'
@@ -151,14 +128,9 @@ with DAG('ETL_Raízen', start_date = datetime.datetime(2022,5,18),
         python_callable = convert_xls_into_xlsx
     )
 
-    extract_sheets = PythonOperator(
-        task_id = 'extract_sheets',
-        python_callable = extract_sheets
+    read_transform_and_save = PythonOperator(
+        task_id = 'read_transform_and_save',
+        python_callable = read_transform_and_save
     )
 
-    data_transformation_and_load = PythonOperator(
-        task_id = 'data_transformation_and_load',
-        python_callable = data_transformation_and_load
-    )
-
-    creating_raw_data_dir >> download_raw_data >> convert_xls_into_xlsx >> extract_sheets >> data_transformation_and_load
+    creating_raw_data_dir >> download_raw_data >> convert_xls_into_xlsx >> read_transform_and_save
