@@ -23,7 +23,7 @@ from airflow.operators.python import PythonOperator
 
 def create_raw_data_dir() -> None:
     """ function which verify the existence of raw_data dir and create if it not exists """
-    
+
     if os.path.isdir("./raw_data"):
         logging.info("Dir already exists")
         pass
@@ -151,7 +151,7 @@ def create_database_from_parquet():
         logging.info(f"Check completed successfully")
 
 
-with DAG('ETL_Raízen', start_date = datetime.datetime(2022,5,18),
+with DAG('ETL_Raízen', start_date = datetime.datetime(2022,8,14),
            schedule_interval = '30 * * * *' , catchup = False) as dag:
 
     create_raw_data_dir = PythonOperator(
