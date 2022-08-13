@@ -151,7 +151,7 @@ def create_database_from_parquet():
         logging.info(f"Check completed successfully")
 
 
-with DAG('ETL_Raízen', start_date = datetime.datetime(2022,8,14),
+with DAG('ETL_Raízen', start_date = datetime.datetime(2022,8,9),
            schedule_interval = '30 * * * *' , catchup = False) as dag:
 
     create_raw_data_dir = PythonOperator(
