@@ -23,7 +23,7 @@ jobs:
         run: docker-compose -f "docker-compose.yaml" up -d --build
   
       - name: Run DAG
-        run: airflow run ETL_Raizen
+        run: airflow dags backfill --start-date 2022-08-13 ETL_Raizen
 
       - name: Stop containers
         if: always()
