@@ -21,6 +21,9 @@ jobs:
 
       - name: Start containers
         run: docker-compose -f "docker-compose.yaml" up -d --build
+  
+      - name: Run DAG
+        run: airflow run ETL_Raízen
 
       - name: Stop containers
         if: always()
