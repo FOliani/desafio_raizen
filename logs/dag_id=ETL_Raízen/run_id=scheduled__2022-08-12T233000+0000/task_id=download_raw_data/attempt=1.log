@@ -1,0 +1,25 @@
+[2022-08-13 11:25:47,240] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.download_raw_data scheduled__2022-08-12T23:30:00+00:00 [queued]>
+[2022-08-13 11:25:47,291] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.download_raw_data scheduled__2022-08-12T23:30:00+00:00 [queued]>
+[2022-08-13 11:25:47,292] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-13 11:25:47,294] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-13 11:25:47,295] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-13 11:25:47,357] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): download_raw_data> on 2022-08-12 23:30:00+00:00
+[2022-08-13 11:25:47,366] {standard_task_runner.py:52} INFO - Started process 91 to run task
+[2022-08-13 11:25:47,379] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'download_raw_data', 'scheduled__2022-08-12T23:30:00+00:00', '--job-id', '291', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmplw8y5knw', '--error-file', '/tmp/tmpmvpo8seb']
+[2022-08-13 11:25:47,389] {standard_task_runner.py:80} INFO - Job 291: Subtask download_raw_data
+[2022-08-13 11:25:47,598] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.download_raw_data scheduled__2022-08-12T23:30:00+00:00 [running]> on host 4bbb34367c41
+[2022-08-13 11:25:47,865] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=download_raw_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T23:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-12T23:30:00+00:00
+[2022-08-13 11:25:47,871] {ETL_Raizen.py:40} INFO - Downloading .xls raw data
+[2022-08-13 11:26:01,738] {ETL_Raizen.py:42} INFO - Succesfully downloaded .xls raw data
+[2022-08-13 11:26:01,739] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-13 11:26:01,767] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=download_raw_data, execution_date=20220812T233000, start_date=20220813T112547, end_date=20220813T112601
+[2022-08-13 11:26:01,814] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-13 11:26:01,874] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

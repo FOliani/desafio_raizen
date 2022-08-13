@@ -1,0 +1,25 @@
+[2022-08-12 23:30:03,630] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.download_raw_data manual__2022-08-12T23:29:58.921584+00:00 [queued]>
+[2022-08-12 23:30:03,648] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.download_raw_data manual__2022-08-12T23:29:58.921584+00:00 [queued]>
+[2022-08-12 23:30:03,649] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:30:03,649] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 23:30:03,650] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:30:03,671] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): download_raw_data> on 2022-08-12 23:29:58.921584+00:00
+[2022-08-12 23:30:03,680] {standard_task_runner.py:52} INFO - Started process 10095 to run task
+[2022-08-12 23:30:03,684] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'download_raw_data', 'manual__2022-08-12T23:29:58.921584+00:00', '--job-id', '271', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmpha1q0gtr', '--error-file', '/tmp/tmpha49dzlt']
+[2022-08-12 23:30:03,685] {standard_task_runner.py:80} INFO - Job 271: Subtask download_raw_data
+[2022-08-12 23:30:03,767] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.download_raw_data manual__2022-08-12T23:29:58.921584+00:00 [running]> on host 4bbb34367c41
+[2022-08-12 23:30:03,902] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=download_raw_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T23:29:58.921584+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-12T23:29:58.921584+00:00
+[2022-08-12 23:30:03,907] {ETL_Raizen.py:40} INFO - Downloading .xls raw data
+[2022-08-12 23:31:40,593] {local_task_job.py:221} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2022-08-12 23:31:40,602] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 10095. PIDs of all processes in the group: [10095]
+[2022-08-12 23:31:40,604] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 10095
+[2022-08-12 23:31:40,608] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-08-12 23:31:40,701] {process_utils.py:75} INFO - Process psutil.Process(pid=10095, status='terminated', exitcode=0, started='23:30:03') (10095) terminated with exit code 0

@@ -1,0 +1,25 @@
+[2022-08-12 23:27:54,634] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.convert_xls_into_xlsx manual__2022-08-12T23:27:44.389207+00:00 [queued]>
+[2022-08-12 23:27:54,649] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.convert_xls_into_xlsx manual__2022-08-12T23:27:44.389207+00:00 [queued]>
+[2022-08-12 23:27:54,650] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:27:54,651] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 23:27:54,651] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:27:54,686] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): convert_xls_into_xlsx> on 2022-08-12 23:27:44.389207+00:00
+[2022-08-12 23:27:54,693] {standard_task_runner.py:52} INFO - Started process 9853 to run task
+[2022-08-12 23:27:54,698] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'convert_xls_into_xlsx', 'manual__2022-08-12T23:27:44.389207+00:00', '--job-id', '265', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmp75y2rdwt', '--error-file', '/tmp/tmpno7wykm4']
+[2022-08-12 23:27:54,700] {standard_task_runner.py:80} INFO - Job 265: Subtask convert_xls_into_xlsx
+[2022-08-12 23:27:54,793] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.convert_xls_into_xlsx manual__2022-08-12T23:27:44.389207+00:00 [running]> on host 4bbb34367c41
+[2022-08-12 23:27:54,887] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=convert_xls_into_xlsx
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T23:27:44.389207+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-12T23:27:44.389207+00:00
+[2022-08-12 23:27:54,889] {ETL_Raizen.py:47} INFO - Converting file .xls into .xlsx using libreoffice
+[2022-08-12 23:27:58,014] {ETL_Raizen.py:49} INFO - File .xls succesfully converted into .xlsx
+[2022-08-12 23:27:58,015] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-12 23:27:58,032] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=ETL_Raízen, task_id=convert_xls_into_xlsx, execution_date=20220812T232744, start_date=20220812T232754, end_date=20220812T232758
+[2022-08-12 23:27:58,087] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-12 23:27:58,139] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

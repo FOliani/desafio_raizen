@@ -1,0 +1,46 @@
+[2022-08-12 23:33:22,249] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.create_database_from_parquet manual__2022-08-12T23:31:39.663111+00:00 [queued]>
+[2022-08-12 23:33:22,272] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: ETL_Raízen.create_database_from_parquet manual__2022-08-12T23:31:39.663111+00:00 [queued]>
+[2022-08-12 23:33:22,272] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:33:22,273] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-12 23:33:22,274] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-12 23:33:22,299] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): create_database_from_parquet> on 2022-08-12 23:31:39.663111+00:00
+[2022-08-12 23:33:22,306] {standard_task_runner.py:52} INFO - Started process 10356 to run task
+[2022-08-12 23:33:22,310] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL_Raízen', 'create_database_from_parquet', 'manual__2022-08-12T23:31:39.663111+00:00', '--job-id', '276', '--raw', '--subdir', 'DAGS_FOLDER/ETL_Raizen.py', '--cfg-path', '/tmp/tmp1vixqcrd', '--error-file', '/tmp/tmpg6o6n07y']
+[2022-08-12 23:33:22,312] {standard_task_runner.py:80} INFO - Job 276: Subtask create_database_from_parquet
+[2022-08-12 23:33:22,425] {task_command.py:369} INFO - Running <TaskInstance: ETL_Raízen.create_database_from_parquet manual__2022-08-12T23:31:39.663111+00:00 [running]> on host 4bbb34367c41
+[2022-08-12 23:33:22,575] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=ETL_Raízen
+AIRFLOW_CTX_TASK_ID=create_database_from_parquet
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-12T23:31:39.663111+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-12T23:31:39.663111+00:00
+[2022-08-12 23:33:22,578] {logging_mixin.py:115} INFO - DPCache_m3
+[2022-08-12 23:33:26,077] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2056, in execute
+    cur.execute(*args, **kwargs)
+sqlite3.OperationalError: unrecognized token: "{"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ETL_Raizen.py", line 133, in create_database_from_parquet
+    df_sql = pd.read_sql("SELECT * FROM {sheets[i]}", conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 608, in read_sql
+    chunksize=chunksize,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2116, in read_query
+    cursor = self.execute(*args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/sql.py", line 2068, in execute
+    raise ex from exc
+pandas.io.sql.DatabaseError: Execution failed on sql 'SELECT * FROM {sheets[i]}': unrecognized token: "{"
+[2022-08-12 23:33:26,098] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=ETL_Raízen, task_id=create_database_from_parquet, execution_date=20220812T233139, start_date=20220812T233322, end_date=20220812T233326
+[2022-08-12 23:33:26,117] {standard_task_runner.py:97} ERROR - Failed to execute job 276 for task create_database_from_parquet (Execution failed on sql 'SELECT * FROM {sheets[i]}': unrecognized token: "{"; 10356)
+[2022-08-12 23:33:26,175] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-12 23:33:26,211] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
